@@ -7,6 +7,7 @@ on:
 
 env:
   ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+  CLIENT_PROJECT: ./SettingX.Core/SettingX.Core.csproj
 
 jobs:
   publish-release:
