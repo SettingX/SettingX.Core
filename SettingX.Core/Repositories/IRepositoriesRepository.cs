@@ -1,16 +1,16 @@
-﻿using SettingX.Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Repositories
 {
     public interface IRepositoriesRepository
     {
-        Task<IRepository> GetAsync(string repositoryId);
-        Task<IEnumerable<IRepository>> GetAllAsync();
+        Task<Repository> GetAsync(string repositoryId);
+        Task<IEnumerable<Repository>> GetAllAsync();
         Task RemoveRepositoryAsync(string repositoryId);
-        Task SaveRepositoryAsync(IRepository repository);
-        Task<IEnumerable<IRepository>> GetAsync(Func<IRepository, bool> filter);
+        Task SaveRepositoryAsync(Repository repository);
+        Task<IEnumerable<Repository>> GetAsync(Func<Repository, bool> filter);
     }
 }

@@ -1,36 +1,18 @@
-﻿using SettingX.Core.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Repositories
 {
-    /// <summary>
-    /// User repository
-    /// </summary>
     public interface IUserRepository
     {
-        /// <summary>Get user by email</summary>
-        Task<IUserEntity> GetUserByUserEmailAsync(string userEmail);
-
-        /// <summary>Get user by email abd passwordHash</summary>
-        Task<IUserEntity> GetUserByUserEmailAsync(string userEmail, string passwordHash);
-
-        /// <summary>Create initial admin</summary>
+        Task<User> GetUserByUserEmailAsync(string userEmail);
+        Task<User> GetUserByUserEmailAsync(string userEmail, string passwordHash);
         Task CreateInitialAdminAsync(string defaultUserEmail, string defaultUserPasswordHash);
-
-        /// <summary>Create user</summary>
-        Task CreateUserAsync(IUserEntity user);
-
-        /// <summary>Save user</summary>
-        Task<bool> UpdateUserAsync(IUserEntity user);
-
-        /// <summary>Get list of all users</summary>
-        Task<List<IUserEntity>> GetUsersAsync();
-
-        /// <summary>Get top user record</summary>
-        Task<IUserEntity> GetTopUserRecordAsync();
-
-        /// <summary>Remove user by user email</summary>
+        Task CreateUserAsync(User user);
+        Task<bool> UpdateUserAsync(User user);
+        Task<List<User>> GetUsersAsync();
+        Task<User> GetTopUserRecordAsync();
         Task<bool> RemoveUserAsync(string userEmail);
     }
 }

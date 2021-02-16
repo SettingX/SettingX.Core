@@ -1,10 +1,11 @@
 ﻿using System;
-using SettingX.Core.Entities;
 
 namespace SettingX.Core.Models
 {
-    public class RepositoryUpdateHistory : IRepositoryUpdateHistory
+    public class RepositoryUpdateHistoricEvent
     {
+        public string Id { set; get; }
+        
         public string RepositoryId { get; set; }
 
         public string InitialCommit { get; set; }

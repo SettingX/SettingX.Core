@@ -1,15 +1,15 @@
-﻿using SettingX.Core.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Repositories
 {
-    public interface IRepositoriesUpdateHistoryRepository
+    public interface IRepositoryUpdateHistoryEventsRepository
     {
-        Task<IRepositoryUpdateHistory> GetAsync(string initialCommit);
-        Task SaveRepositoryUpdateHistory(IRepositoryUpdateHistory entity);
-        Task<IEnumerable<IRepositoryUpdateHistory>> GetAsyncByInitialCommit(string initialCommit);
-        Task RemoveRepositoryUpdateHistoryAsync(string repositoryUpdateHistoryId);
-        Task RemoveRepositoryUpdateHistoryAsync(IEnumerable<IRepositoryUpdateHistory> repositories);
+        Task<RepositoryUpdateHistoricEvent> GetAsync(string initialCommit);
+        Task SaveRepositoryUpdateHistoryAsync(RepositoryUpdateHistoricEvent entity);
+        Task<IEnumerable<RepositoryUpdateHistoricEvent>> GetAsyncByInitialCommitAsync(string initialCommit);
+        Task RemoveRepositoryUpdateHistoryAsync(string id);
+        Task RemoveRepositoryUpdateHistoryAsync(IEnumerable<RepositoryUpdateHistoricEvent> repositories);
     }
 }

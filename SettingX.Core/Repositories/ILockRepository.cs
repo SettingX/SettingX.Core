@@ -1,11 +1,11 @@
-﻿using SettingX.Core.Entities;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Repositories
 {
-    public interface ILockRepository
+    public interface IEditLockRepository
     {
-        Task<ILockEntity> GetJsonPageLockAsync();
+        Task<EditLock> GetJsonPageLockAsync();
         Task SetJsonPageLockAsync(string userEmail, string userName, string ipAddress);
         Task ResetJsonPageLockAsync();
     }

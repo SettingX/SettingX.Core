@@ -1,10 +1,10 @@
-﻿using SettingX.Core.Entities;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Repositories
 {
     public interface IUserActionHistoryRepository
     {
-        Task SaveUserActionHistoryAsync(IUserActionHistoryEntity userActionHistory);
+        Task SaveUserActionHistoryAsync(UserActionHistory userActionHistory);
     }
 }

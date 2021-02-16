@@ -1,12 +1,11 @@
-﻿using SettingX.Core.Entities;
-using System;
+﻿using System;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 
 namespace SettingX.Core.Models
 {
-    public class Network : INetwork
+    public class Network
     {
         public string Id { get; set; }
         public string Name { get; set; }

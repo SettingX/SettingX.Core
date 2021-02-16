@@ -1,6 +1,6 @@
-﻿using SettingX.Core.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Repositories
 {
@@ -14,7 +14,7 @@ namespace SettingX.Core.Repositories
             string userIpAddress);
 
         Task SaveKeyValuesHistoryAsync(
-            IEnumerable<IKeyValueEntity> keyValues,
+            IEnumerable<KeyValue> keyValues,
             string userName,
             string userIpAddress);
 
@@ -31,6 +31,6 @@ namespace SettingX.Core.Repositories
             string userName,
             string userIpAddress);
 
-        Task<List<IKeyValueHistory>> GetHistoryByKeyValueAsync(string keyValueId);
+        Task<List<KeyValueHistoricEvent>> GetHistoryByKeyValueAsync(string keyValueId);
     }
 }

@@ -1,5 +1,4 @@
-﻿using SettingX.Core.Entities;
-using SettingX.Core.Models;
+﻿using SettingX.Core.Models;
 using System.Threading.Tasks;
 
 namespace SettingX.Core.Repositories
@@ -9,8 +8,8 @@ namespace SettingX.Core.Repositories
         Task<Network[]> GetAllAsync();
         Task<Network> GetByIpAsync(string ip);
         Task<bool> NetworkExistsAsync(string id);
-        Task AddAsync(INetwork network);
-        Task UpdateAsync(INetwork network);
+        Task AddAsync(Network network);
+        Task UpdateAsync(Network network);
         Task DeleteAsync(string id);
     }
 }

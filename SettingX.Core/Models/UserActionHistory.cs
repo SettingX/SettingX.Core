@@ -1,9 +1,8 @@
 ﻿using System;
-using SettingX.Core.Entities;
 
 namespace SettingX.Core.Models
 {
-    public class UserActionHistory : IUserActionHistoryEntity
+    public class UserActionHistory
     {
         public string UserEmail { get; set; }
         public DateTime ActionDate { get; set; }

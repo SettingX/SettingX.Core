@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using SettingX.Core.Entities;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Services
 {
@@ -7,6 +7,6 @@ namespace SettingX.Core.Services
     {
         Task CheckInitialAdminAsync();
 
-        Task CreateUserAsync(IUserEntity user);
+        Task CreateUserAsync(User user);
     }
 }

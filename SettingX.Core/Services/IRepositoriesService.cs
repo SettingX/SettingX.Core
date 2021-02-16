@@ -1,5 +1,4 @@
-﻿using SettingX.Core.Entities;
-using SettingX.Core.Models;
+﻿using SettingX.Core.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,14 +7,14 @@ namespace SettingX.Core.Services
     public interface IRepositoriesService
     {
         Task<RepositoriesServiceModel> CreateRepositoryAsync(
-            IRepository repository,
+            Repository repository,
             string userName,
             string userIp,
             string userEmail,
             bool isProduction);
 
         Task<RepositoriesServiceModel> UpdateRepositoryAsync(
-            IRepository repository,
+            Repository repository,
             string userName,
             string userIp,
             string userEmail,
@@ -25,17 +24,17 @@ namespace SettingX.Core.Services
         Task<string> GetFileData(string file);
 
         Task AddToHistoryRepository(
-            IRepository repository,
+            Repository repository,
             string settingsJson,
             string lastCommit = "",
             bool isManual = false,
             string userName = "",
             string userIp = "");
 
-        Task<List<IRepository>> GetAllRepositories();
+        Task<List<Repository>> GetAllRepositories();
 
         Task<RepositoriesServiceModel> GetPaginatedRepositories(string search = "", int? page = 1);
 
-        Task<bool> SaveKeyValuesAsync(IEnumerable<IKeyValueEntity> keyValues, string userEmail, string userIp, bool isProduction);
+        Task<bool> SaveKeyValuesAsync(IEnumerable<KeyValue> keyValues, string userEmail, string userIp, bool isProduction);
     }
 }

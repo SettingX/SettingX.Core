@@ -1,9 +1,8 @@
-﻿using SettingX.Core.Entities;
-using System;
+﻿using System;
 
 namespace SettingX.Core.Models
 {
-    public class KeyValue : IKeyValueEntity
+    public class KeyValue
     {
         public string KeyValueId { get; set; }
         public string Value { get; set; }

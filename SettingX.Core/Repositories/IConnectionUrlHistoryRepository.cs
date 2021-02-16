@@ -1,17 +1,13 @@
-﻿using SettingX.Core.Entities;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using SettingX.Core.Models;
 
 namespace SettingX.Core.Repositories
 {
-    public interface IConnectionUrlHistoryRepository
+    public interface IConnectionUrlHistoricEventsRepository
     {
-        Task<(IEnumerable<IConnectionUrlHistory>, int)> GetPageAsync(int pageNum, int pageSize);
-        Task<IEnumerable<IConnectionUrlHistory>> GetByRepositoryIdAsync(string repositoryId);
-        Task SaveConnectionUrlHistoryAsync(
-            string repositoryId,
-            string ip,
-            string userAgent);
+        Task<(IEnumerable<ConnectionUrlHistoricEvent>, int)> GetPageAsync(int pageNum, int pageSize);
+        Task<IEnumerable<ConnectionUrlHistoricEvent>> GetByRepositoryIdAsync(string repositoryId);
+        Task SaveConnectionUrlHistoricEventAsync(ConnectionUrlHistoricEvent historicEvent);
     }
 }

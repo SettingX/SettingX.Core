@@ -1,8 +1,6 @@
-﻿﻿using SettingX.Core.Entities;
-
-namespace SettingX.Core.Models
+﻿namespace SettingX.Core.Models
 {
-    public class Repository : IRepository
+    public class Repository
     {
         public string RepositoryId { get; set; }
         public string LastModified { get; set; }
