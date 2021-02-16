@@ -3,7 +3,7 @@
     public enum UpdateSettingsStatus
     {
         Ok = 0,
-        JsonFormarIncorrrect = 1,
+        JsonFormatIncorrect = 1,
         OutOfDate = 2,
         InternalError = 3,
         NotFound = 4,
