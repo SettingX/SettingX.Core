@@ -6,8 +6,11 @@ namespace SettingX.Core.Repositories
 {
     public interface IConnectionUrlHistoricEventsRepository
     {
-        Task<(IEnumerable<ConnectionUrlHistoricEvent>, int)> GetPageAsync(int pageNum, int pageSize);
-        Task<IEnumerable<ConnectionUrlHistoricEvent>> GetByRepositoryIdAsync(string repositoryId);
-        Task SaveConnectionUrlHistoricEventAsync(ConnectionUrlHistoricEvent historicEvent);
+        Task<(List<ConnectionUrlHistoricEvent>, int)> GetPageAsync(int pageNum, int pageSize);
+        Task<List<ConnectionUrlHistoricEvent>> GetByRepositoryIdAsync(string repositoryId);
+        Task SaveConnectionUrlHistoricEventAsync(
+            string repositoryId,
+            string ip,
+            string userAgent);
     }
 }
