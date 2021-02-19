@@ -14,7 +14,7 @@ namespace SettingX.Core.Repositories
             string userIpAddress);
 
         Task SaveKeyValuesHistoryAsync(
-            IEnumerable<KeyValue> keyValues,
+            List<KeyValue> keyValues,
             string userName,
             string userIpAddress);
 
