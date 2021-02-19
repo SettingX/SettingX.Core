@@ -10,7 +10,7 @@ namespace SettingX.Core.Repositories
         Task UpdateBlobAsync(string json, string userName, string ipAddress, string file = null);
         Task DelBlobAsync(string file = null);
         Task<bool> ExistsAsync(string file = null);
-        Task<IEnumerable<BlobResult>> GetBlobFilesDataAsync();
+        Task<List<BlobResult>> GetBlobFilesDataAsync();
         Task<List<string>> GetExistingFileNamesAsync();
     }
 }

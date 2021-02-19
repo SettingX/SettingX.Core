@@ -35,6 +35,6 @@ namespace SettingX.Core.Services
 
         Task<RepositoriesServiceModel> GetPaginatedRepositories(string search = "", int? page = 1);
 
-        Task<bool> SaveKeyValuesAsync(IEnumerable<KeyValue> keyValues, string userEmail, string userIp, bool isProduction);
+        Task<bool> SaveKeyValuesAsync(List<KeyValue> keyValues, string userEmail, string userIp, bool isProduction);
     }
 }

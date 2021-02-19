@@ -8,7 +8,7 @@ namespace SettingX.Core.Repositories
     {
         Task<Token> GetAsync(string tokenId);
         Task<Token> GetTopRecordAsync();
-        Task<IEnumerable<Token>> GetAllAsync();
+        Task<List<Token>> GetAllAsync();
         Task RemoveTokenAsync(string tokenId);
         Task SaveTokenAsync(Token token);
     }

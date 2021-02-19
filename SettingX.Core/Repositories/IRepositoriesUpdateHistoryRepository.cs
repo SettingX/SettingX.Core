@@ -8,8 +8,8 @@ namespace SettingX.Core.Repositories
     {
         Task<RepositoryUpdateHistoricEvent> GetAsync(string initialCommit);
         Task SaveRepositoryUpdateHistoryAsync(RepositoryUpdateHistoricEvent entity);
-        Task<IEnumerable<RepositoryUpdateHistoricEvent>> GetAsyncByInitialCommitAsync(string initialCommit);
+        Task<List<RepositoryUpdateHistoricEvent>> GetAsyncByInitialCommitAsync(string initialCommit);
         Task RemoveRepositoryUpdateHistoryAsync(string id);
-        Task RemoveRepositoryUpdateHistoryAsync(IEnumerable<RepositoryUpdateHistoricEvent> repositories);
+        Task RemoveRepositoryUpdateHistoryAsync(List<RepositoryUpdateHistoricEvent> repositories);
     }
 }

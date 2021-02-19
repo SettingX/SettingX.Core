@@ -15,7 +15,7 @@ namespace SettingX.Core.Blob
 
         Task<BlobResult> GetAsync(string blobContainer, string key);
 
-        Task<IEnumerable<BlobResult>> GetBlobFilesDataAsync(string container);
+        Task<List<BlobResult>> GetBlobFilesDataAsync(string container);
 
         Task<List<string>> GetExistingFileNames(string container);
 
