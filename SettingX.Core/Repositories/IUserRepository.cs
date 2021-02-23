@@ -6,7 +6,6 @@ namespace SettingX.Core.Repositories
 {
     public interface IUserRepository
     {
-        Task<User> GetUserByUserEmailAsync(string userEmail);
         Task<User> GetUserByUserEmailAsync(string userEmail, string passwordHash);
         Task CreateInitialAdminAsync(string defaultUserEmail, string defaultUserPasswordHash);
         Task CreateUserAsync(User user);
