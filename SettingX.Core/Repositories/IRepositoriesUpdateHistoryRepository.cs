@@ -9,7 +9,6 @@ namespace SettingX.Core.Repositories
         Task<RepositoryUpdateHistoricEvent> GetAsync(string initialCommit);
         Task SaveRepositoryUpdateHistoryAsync(RepositoryUpdateHistoricEvent entity);
         Task<List<RepositoryUpdateHistoricEvent>> GetAsyncByInitialCommitAsync(string initialCommit);
-        Task RemoveRepositoryUpdateHistoryAsync(string id);
-        Task RemoveRepositoryUpdateHistoryAsync(List<RepositoryUpdateHistoricEvent> repositories);
+        Task RemoveRepositoryUpdateHistoryAsync(List<string> repositoryUpdateHistoryIds);
     }
 }
