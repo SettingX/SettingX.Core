@@ -6,9 +6,9 @@ namespace SettingX.Core.Repositories
 {
     public interface IRepositoryUpdateHistoryEventsRepository
     {
-        Task<RepositoryUpdateHistoricEvent> GetAsync(string initialCommit);
+        Task<RepositoryUpdateHistoricEvent> GetAsync(string repositoryUpdateHistoryId);
         Task SaveRepositoryUpdateHistoryAsync(RepositoryUpdateHistoricEvent entity);
-        Task<List<RepositoryUpdateHistoricEvent>> GetAsyncByInitialCommitAsync(string initialCommit);
+        Task<List<RepositoryUpdateHistoricEvent>> GetByInitialCommitAsync(string initialCommit);
         Task RemoveRepositoryUpdateHistoryAsync(List<string> repositoryUpdateHistoryIds);
     }
 }
