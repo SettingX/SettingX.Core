@@ -8,8 +8,9 @@ namespace SettingX.Core.Repositories
     public interface IRoleRepository
     {
         Task<Role> GetAsync(string roleId);
+        Task<Role> GetByNameAsync(string roleName);
         Task<List<Role>> GetAllAsync();
-        Task<List<Role>> GetAllAsync(Func<Role, bool> filter);
+        Task<List<Role>> FindAsync(List<string> roleIds);
         Task SaveAsync(Role entity);
         Task RemoveAsync(string roleId);
     }
