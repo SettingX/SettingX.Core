@@ -4,9 +4,6 @@ namespace SettingX.Core.Models
 {
     public class User
     {
-        [JsonPropertyName("id")]
-        public string Id { set; get; }
-        
         [JsonPropertyName("email")]
         public string Email { get; set; }
         
