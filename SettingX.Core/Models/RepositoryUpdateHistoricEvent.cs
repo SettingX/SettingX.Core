@@ -5,9 +5,6 @@ namespace SettingX.Core.Models
 {
     public class RepositoryUpdateHistoricEvent
     {
-        [JsonPropertyName("id")]
-        public string Id { set; get; }
-        
         [JsonPropertyName("repository_id")]
         public string RepositoryId { get; set; }
         
