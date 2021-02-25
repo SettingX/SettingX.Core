@@ -17,7 +17,6 @@ namespace SettingX.Core.Models
         [JsonPropertyName("ip")]
         public string Ip { get; set; }
         
-        [JsonPropertyName("ips")]
         public string[] Ips => Ip.Split(new[] { ';', ',' }, StringSplitOptions.RemoveEmptyEntries).Select(item => item.Trim()).ToArray();
 
         public bool IsValidIps()
