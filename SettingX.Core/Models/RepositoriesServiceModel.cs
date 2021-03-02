@@ -13,6 +13,6 @@ namespace SettingX.Core.Models
         
         public object Data { get; set; }
         
-        public List<object> CollectionData { get; set; }
+        public List<string> CollectionData { get; set; }
     }
 }

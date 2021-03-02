@@ -1,3 +1,4 @@
+using System;
 using System.Text.Json.Serialization;
 
 namespace SettingX.Core.Models
@@ -9,6 +10,9 @@ namespace SettingX.Core.Models
         
         [JsonPropertyName("key_value_id")]
         public string KeyValueId { get; set; }
+        
+        [JsonPropertyName("date_time")]
+        public DateTime DateTime { get; set; }
         
         [JsonPropertyName("new_value")]
         public string NewValue { get; set; }

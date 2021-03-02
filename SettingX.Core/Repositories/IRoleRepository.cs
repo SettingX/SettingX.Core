@@ -10,7 +10,8 @@ namespace SettingX.Core.Repositories
         Task<Role> GetAsync(string roleId);
         Task<Role> GetByNameAsync(string roleName);
         Task<List<Role>> GetAllAsync();
-        Task<List<Role>> FindAsync(List<string> roleIds);
+        Task<List<Role>> FindByIdsAsync(List<string> roleIds);
+        Task<List<Role>> FindByNamesAsync(List<string> roleNames);
         Task SaveAsync(Role entity);
         Task RemoveAsync(string roleId);
     }
